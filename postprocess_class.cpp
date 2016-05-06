@@ -6,11 +6,13 @@
 using namespace Eigen;
 
 using namespace std;
+
+//Constructor
+
 postprocess_class::postprocess_class()
 {
 
 }
-
 
 void postprocess_class::export_vtk(vector<ClassElem_2D_tri_linear>& elem_input ,vector<ClassNodes>& node_input)
 
@@ -18,9 +20,9 @@ void postprocess_class::export_vtk(vector<ClassElem_2D_tri_linear>& elem_input ,
 
 int num_nodes=node_input.size();
 int nelements=elem_input.size();
-int node_per_element=elem_input[0].getlocal_conectivity().size();// AIXO DE LOCAL CONECTIVITY NS SI ESTA BE DEFINIT!!
+int node_per_element=elem_input[0].get_local_conectivity().size();
 ofstream myfile;
-myfile.open ("results/res.vtk");
+myfile.open ("MyParaviewFile_2D_tri_linear.vtk"); //for 2D triangular linear elements
 myfile << "# vtk DataFile Version 1.0\n";
 myfile << "ECM-CELL DIFFUSION-MECHANICS\n";
 myfile << "ASCII\n";
@@ -40,7 +42,7 @@ for (int i=0; i<num_nodes; i++){
 myfile << "\nCELLS "<< nelements<<" "<<(1+node_per_element)*nelements<<"\n";
 
 for (int i=0; i<nelements; i++){
-myfile << node_per_element<<" "<<elem_input[i].getlocal_conectivity().transpose()<<"\n";
+myfile << node_per_element<<" "<<elem_input[i].get_local_conectivity().transpose()<<"\n";
 }
 
 myfile << "CELL_TYPES "<<nelements<<"\n";

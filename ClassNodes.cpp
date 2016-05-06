@@ -28,7 +28,7 @@ int ClassNodes::getid(){
     return id;
   }
 VectorXd ClassNodes::getcoordinates(){
-    return coordinates
+    return coordinates;
 }
 
 double ClassNodes::getSol(){

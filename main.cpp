@@ -126,15 +126,14 @@ for (int i = 0; i<num_nodes; i++ )
 {
     nod[i].save_Sol(aux_sol(i));
 }
-}
+
 
 //Postprocess
 
 postprocess_class export_object;
 
-export_object.postprocess(elements, nodes);
+export_object.export_vtk(elements, nod);
 
-cout<<elements[1];
 return 0;
 }
 

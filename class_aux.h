@@ -4,6 +4,6 @@
 using namespace Eigen;
 using namespace std;
 
-MatrixXd read_data(const string&);
+MatrixXd read_files(const string&);
 
 void print_matrix(const MatrixXd&);

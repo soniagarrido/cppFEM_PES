@@ -7,7 +7,7 @@
 #define MAXBUFSIZE  ((int) 1e6)
 using namespace std;
 using namespace Eigen;
-MatrixXd read_data(const string& file_path)
+MatrixXd read_files(const string& file_path)
 {
 
     int x, y;

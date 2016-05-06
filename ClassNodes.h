@@ -4,7 +4,8 @@
 #include <iostream>
 #include <string>
 
-
+using namespace Eigen;
+using namespace std;
 class ClassNodes{
 public:
     ClassNodes();

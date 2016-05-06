@@ -128,16 +128,11 @@ for (int i = 0; i<num_nodes; i++ )
 }
 }
 
-<<<<<<< HEAD
 //Postprocess
 
 postprocess_class export_object;
-export_object.export_vtk(elements, nodes);
-=======
-//Export the solution to vtk (paraview)
-postprocess_class export_object;
+
 export_object.postprocess(elements, nodes);
->>>>>>> origin/master
 
 cout<<elements[1];
 return 0;
